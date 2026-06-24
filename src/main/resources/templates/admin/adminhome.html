@@ -1,0 +1,25 @@
+<!doctype html>
+	<html lang="en" th:replace="admin/adminbase::layout(~{::section})">
+	<head>
+		
+	</head>
+	<body>
+		<section>
+			<div class="row">
+				<div class="col-sm-4 p-3">
+					<div class="card text-center">
+						<h2>Total Registered Students </h2>
+						<h4 th:text="${scount}" style="color: orangered;"></h4>
+					</div>
+				</div>
+				
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4"></div>
+				
+				
+				
+			</div>
+		</section>
+		
+	</body>
+</html>

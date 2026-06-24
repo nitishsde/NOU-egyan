@@ -1,0 +1,126 @@
+.bg-brown 
+{
+	background-color: rgb(139, 0,0);
+}
+.okkk
+   {
+    background-size: cover;
+    background-image: url('../images/bg.jpg');
+    background-attachment: fixed;
+    height: 600px;
+
+
+   }
+   	
+   }
+   .just{
+   	text-align: justify;
+   }
+
+   .footer{
+   	background-color: #8B0000;
+   }
+   .sbtn{
+   	background-color: #EF6603;
+   	border-top-right-radius:25px;
+   	border-bottom-right-radius:25px;
+   	border: 2px #EF6603;
+   	padding: 11px;
+   	float: right;
+   	margin-top: -38px;
+   	color: white;
+
+   }
+   ul li{
+   	padding: 3px;
+   }
+
+
+
+   .nsvg{
+   	border: 1px  black;
+   	 border-radius: 100%;
+   }
+
+
+   .portal
+   {
+   background:linear-gradient(rgba(0,0,0,.4),rgba(255,255,255,.5)),url('../img/bg.jpg');
+   background-attachment:fixed;
+   background-size:100% 100%;
+   background-repeat:no-repeat;
+   min-height:40vh;
+   }
+   .portal .box-1
+   {
+   /* border:1px solid #000; */
+   height:5rem;
+   width:5rem;
+   border-radius:50%;st-c
+   box-shadow:5px 5px 10px #003366;
+   padding:20px;
+   margin:0px auto;
+   background:#fff;
+   }
+   .portal .box-1 span
+   {
+   font-size:1.5rem;
+   font-weight:700;
+   color:#003366;
+   font-family:"poppins",sans-serif;
+   }
+   .portal .box-content
+   {
+	
+
+	.my-footer-link li{
+	  display: inline;
+	  margin:0em 0.1em;
+	}
+
+	.my-footer-link li a{
+	  color:#fff;
+	  background-color: orange;
+	  padding: 0.5em;
+	  border-radius: 50%;
+	  display: inline-block;
+	    width: 40px;
+	    height: 40px;
+		font-size: 20px;
+	    border-radius: 50%;
+	    text-align: center;
+	}
+	.my-header-link li{
+	  display: inline;
+	  margin:0em 0.1em;
+	}
+
+	.my-header-link li a{
+
+		border: 2px solid black;
+		padding: 0.5em;
+		border-radius: 50%;
+		display: inline-block;
+		  width: 40px;
+		  height: 40px;
+		font-size: 19px;
+		  border-radius: 50%;
+		  text-align: center;
+		
+	}
+
+	.rform{
+		border-radius: 10px;
+
+	}
+
+	.new{
+		border: 2px #8B0000;
+		border-radius:25px 0px 0px 25px;
+	    position: fixed;
+	    top: 50vh;
+	    right: -50px;
+	    transform: rotate(360deg);
+	    
+	    
+	}

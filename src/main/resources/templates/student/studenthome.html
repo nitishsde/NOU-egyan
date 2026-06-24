@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" th:replace="student/studentbase::layout(~{::section})">
+  <head>
+   
+  </head>
+  <body>
+    <section>
+		<div class="row ">
+			<div class="col-sm-12 bg-light">
+			<marquee behavior="alternate">
+				<p style="color: black">For any Query reach us through our helpline number <span style="color: orangered;"> <i class="fa-solid fa-phone fa-shake"></i> +91 9005735437</span>,<span style="color: orangered;"><i class="fa-solid fa-phone fa-shake"></i>+91 9005735437</span > or Visit us at<span style="color: orangered;"><i class="fa-solid fa-enevalope"></i>mrnitishsingh15@gmail.com</span></p>
+			</marquee>
+			</div>
+			<div class="col-sm-12 p-2">
+				<div class="row">
+					<div class="col-sm-11 mx-auto">
+						<div class="card w-100 bg-light  h-100 shadow">
+							<div class="row" style="color: orangered;">
+								<div class="col-sm-12 text-center ">
+									<div th:text="${msg}">
+										<p th:text="${msg}" class="text-success"></p>
+									</div>
+								</div>
+								<h2 class="ms-5">Hello, Welcome <span th:text="${sinfo.name}"></span></h2>
+								<hr>
+							</div>	
+							<div class="row">
+								<div class="col-md-5">
+									<div th:if="${sinfo.profilepic}" class="text-center p-2 pt-0">
+										<img th:src="@{'/user/' +${sinfo.profilepic}}" alt="image not found" class="w-75">
+									</div>
+									<div th:unless="${sinfo.profilepic}" class="text-center pt-0 p-2">
+										<img alt="image not found" src="/images/u.jpg" class="w-75">
+									</div>
+								</div>
+								<div class="col-sm-7 mt-4">
+									<p> <i class="fa-solid fa-user-tie  fa-beat-fade" style="color:#8B0000; font-size:28px;"> </i>&nbsp; &nbsp;<span th:text="${sinfo.name}" style="color:black;">  lebal text</span></p>
+									<p><i class="fa-solid fa-graduation-cap fa-beat-fade" style="color:#8B0000; font-size:28px;">&nbsp; &nbsp;</i> <span th:text="${sinfo.branch}" style="color:black;">  lebal text</span></p>
+									<p> <i class="fa-solid fa-envelope fa-beat-fade" style="color:#8B0000; font-size:28px;"></i>&nbsp;&nbsp; <span th:text="${sinfo.emailaddress}" style="color:black;">    lebal text</span></p>
+									<p><i class="fa-solid fa-phone fa-bounce" style="color:#8B0000; font-size:28px;"></i>&nbsp; &nbsp;<span th:text="${sinfo.contactno}" style="color:black;">  lebal text</span></p>
+								</div>
+							</div>
+							<div class="row">
+								<form method="post" class="w-100" th:object="${dto}" enctype="multipart/form-data">
+									<div class="row w-100 px-5 mx-5 mb-5">
+										<div class="col-md-5 py-2 text-end">
+											<input type="file"class="text-dark" th:field="${dto.profilepic}" />
+										</div>
+										<div class="col-md-6 mb-4">
+											<button type="submit" class="btn text-white w-50 py-3 rounded-3" style="background-color: red; border: 2px solid white; border: none;"><i class="fa-solid fa-cloud-arrow-up"></i> Upload pic</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<section class="container-fluid p-0">
+
+<!-- Slider -->
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item active"><img src="images/banner.jpg" class="d-block w-100"></div>
+<div class="carousel-item"><img src="images/banner.jpg" class="d-block w-100"></div>
+<div class="carousel-item"><img src="images/banner.jpg" class="d-block w-100"></div>
+</div>
+<button class="carousel-control-prev" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+<button class="carousel-control-next" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+</div>
+
+<!-- Marquee -->
+<div class="bg-warning py-3">
+<marquee>
+<span class="bg-danger text-white px-3 py-2 mx-3">Portal is easy & user friendly</span>
+<span class="bg-danger text-white px-3 py-2 mx-3">Fully secured & 24x7 access</span>
+<span class="bg-danger text-white px-3 py-2 mx-3">Smart digital learning system</span>
+</marquee>
+</div>
+
+<!-- About -->
+<div class="container py-5">
+<div class="row align-items-center">
+<div class="col-md-7">
+<h3>ABOUT <span class="text-danger">NOU e-GYAN PORTAL</span></h3>
+<p style="text-align:justify">
+Nalanda Open University welcomes students, faculties and study centres to the NOU e-Gyan portal.  
+It provides online study material, tracking, assessments and secure access 24×7.
+</p>
+</div>
+<div class="col-md-5 text-center">
+<img src="images/slider1.jpeg" class="img-fluid rounded shadow">
+</div>
+</div>
+</div>
+
+<!-- Portal Users -->
+<div class="container-fluid py-5" style="background:url('../images/bg.jpg') center/cover">
+<div class="container">
+<h3 class="text-center text-white mb-4">Users of the Portal</h3>
+<div class="row">
+
+<div class="col-md-4 mb-3">
+<div class="card p-4 text-center h-100">
+<h2>01</h2>
+<p>University admin manages portal & uploads content.</p>
+<a href="/ragistration" class="btn btn-warning">Registration</a>
+</div>
+</div>
+
+<div class="col-md-4 mb-3">
+<div class="card p-4 text-center h-100">
+<h2>02</h2>
+<p>Study centre manages students & assignments.</p>
+<a href="/adminlogin" class="btn btn-warning">Admin Login</a>
+</div>
+</div>
+
+<div class="col-md-4 mb-3">
+<div class="card p-4 text-center h-100">
+<h2>03</h2>
+<p>Students access study material & notifications.</p>
+<a href="/studentlogin" class="btn btn-warning">Student Login</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- Services -->
+<div class="container py-5">
+<h3 class="text-center">Student Services</h3>
+<div class="row text-center mt-4">
+<div class="col-6 col-md-3"><img src="images/registration.jpg" class="img-fluid"><p>Login</p></div>
+<div class="col-6 col-md-3"><img src="images/dashboard.jpg" class="img-fluid"><p>Dashboard</p></div>
+<div class="col-6 col-md-3"><img src="images/online-courses.jpg" class="img-fluid"><p>SLM</p></div>
+<div class="col-6 col-md-3"><img src="images/e-lectures.jpg" class="img-fluid"><p>e-Books</p></div>
+</div>
+</div>
+
+<!-- Courses -->
+<div class="container py-5">
+<h3 class="text-center">Our Courses</h3>
+<div class="row text-center">
+<div class="col-md-4"><img src="images/omp.jpg" class="img-fluid"><p>BBA</p></div>
+<div class="col-md-4"><img src="images/omp3.jpg" class="img-fluid"><p>BCA</p></div>
+<div class="col-md-4"><img src="images/omp2.jpg" class="img-fluid"><p>MCA</p></div>
+</div>
+</div>
+
+<!-- Youtube -->
+<div class="container-fluid py-5" style="background:url('../images/bg4.jpg') center/cover">
+<div class="container">
+<h3 class="text-white text-center">Tutorial Videos</h3>
+<div class="row mt-4">
+<div class="col-md-6 mb-3"><a href="https://youtu.be/Sh9VxOBoYbk"><img src="images/yt.jpg" class="img-fluid rounded"></a></div>
+<div class="col-md-6 mb-3"><a href="https://youtu.be/cEaTY8EfdRs"><img src="images/yt1.jpg" class="img-fluid rounded"></a></div>
+</div>
+</div>
+</div>
+
+</section>
+</body>
+</html>

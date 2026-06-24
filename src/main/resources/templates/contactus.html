@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" th:replace="base::layout(~{::section})">
+  <head>
+   
+  </head>
+  <body>
+    <section>
+		<div class="container-fluid">
+			
+		<div class="row">
+			<div class="col-sm-6 mx-auto">
+				<div th:if="${message}">
+				<p th:text="${message}" class="alert alert-success alert-dismissible"></p>	
+				</div>
+			</div>
+			<div style="margin-left: 65px; margin-bottom: 10px;"><span style="font-weight: bold; color: rgb(99, 98, 98);">JOIN</span><span style="color: #FFA500; border: 2px;"> _________________</span>
+				      <p style="font-size: 28px; font-weight: bold;">ENQUIRY<span style="color: #8B0000;"> FORM</span></p></div>
+			<form class="form-group shadow " method="post" th:object="${dto}">
+			<center>	<img src="images/logo1.jpg" style="height:150px" ></center>
+				<table class="table table-bordered" style="margin: auto;width: 60%;">
+					<tr>
+						<td>Enter Name<span style="color:red; "> <sup>*</sup></span></td>
+						<td>
+							<input type="text" required class="form-control" placeholder=" Enter Name" th:field="${dto.name}"/>
+						</td>
+					</tr>
+					<tr>
+					<td>Select Gender<span style="color:red;"> <sup>*</sup></span></td>
+				
+					<td>
+						<input type="radio" required class="form-check-input" value="Male" th:field="${dto.gender}"/>Male
+						<input type="radio" required class="form-check-input" value="Female" th:field="${dto.gender}"/>Female
+					</td>
+					</tr>
+					<tr>
+						<td>Contact Number<span style="color:red;"> <sup>*</sup></span></td>
+						<td>
+							<input type="number" required class="form-control" placeholder=" Phone No" th:field="${dto.contactno}"/>
+						</td>
+					</tr>
+					<tr>
+						<td>Email Address<span style="color:red;"> <sup>*</sup></span></td>
+						<td>
+							<input type="email" required class="form-control" placeholder=" Enter Email iD" th:field="${dto.emailaddress}"/>
+						</td>
+					</tr>
+					<tr>
+						<td>Enquiry Test<span style="color:red;"> <sup>*</sup></span></td>
+						<td>
+						<textarea required class="form-control" placeholder= " type Your Message.."th:field="${dto.enquirytext}"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<button type="submit" class="btn w-100" style="background-color:#8B0000; color:white; font-weight:bold;">Submit Now <i class="fa-solid fa-share-from-square"></i></button>
+						</td>
+					</tr>
+					</div>
+				</table>
+			</form>
+		</div>
+	</section>
+  </body>
+</html>

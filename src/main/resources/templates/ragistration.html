@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en" th:replace="base::layout(~{::section})">
+  <head>
+   
+  </head>
+  <body>
+    <section>
+		<div class="row mt-3">
+			
+			<div class="col-sm-10 mx-auto">
+				<div th:if="${message}">
+				<p th:text="${message}" class="alert alert-success alert-dismissible"></p>	
+				</div>
+			</div>
+			
+			<div style="margin-left: 65px; margin-bottom: 10px;"><span style="font-weight: bold; color: rgb(99, 98, 98);">JOIN</span><span style="color: #FFA500; border: 2px;"> _________________</span>
+			      <p style="font-size: 28px; font-weight: bold;">REGISTATION<span style="color: #8B0000;"> HERE</span></p></div>
+				  <center>	<img src="images/logo1.jpg" style="height:150px" ></center>
+			<form  method="post" th:object="${dto}" class="">
+			<table align="center" class="table table-bordered shadow" style="margin: auto;width: 60%;">
+				<tr>
+				<td>Enter Enrollment Number<span style="color:red;"> <sup>*</sup></span></td>
+					<td>
+					<input type="text" required class="form-control" placeholder="Enrollment No" th:field="${dto.enrollmentno}"/>
+					</td>
+				</tr>			
+			<tr>
+			<td> Name<span style="color:red;"> <sup>*</sup></span></td>
+			<td><input type="text" required class="form-control" placeholder="Enter Name" th:field="${dto.name}"/></td>
+			</tr>
+			<tr>
+			<td> Father's Name<span style="color:red;"> <sup>*</sup></span></td>
+			<td><input type="text" required class="form-control" placeholder="Enter Father's Name" th:field="${dto.fname}"/></td>
+			</tr>
+			<tr>
+			<td> Mother's Name<span style="color:red;"> <sup>*</sup></span></td>
+			<td><input type="text" required class="form-control" placeholder="Enter Mother's Name" th:field="${dto.mname}"/></td>
+			</tr>
+			<tr>
+				<td>Select Gender<span style="color:red;"> <sup>*</sup></span></td>
+							
+				<td>
+				<input type="radio" required class="form-check-input" value="Male" th:field="${dto.gender}" />Male
+				<input type="radio" required class="form-check-input" value="Female" th:field="${dto.gender}"/>Female
+				</td>
+				</tr>
+				<tr>
+				<td>Address<span style="color:red;"> <sup>*</sup></span></td>
+				<td>
+				<textarea required class="form-control w-100" placeholder="Address" th:field="${dto.address}" ></textarea>
+				 </td>
+				</tr>	
+				<tr>
+				<td>Program<span style="color:red;"> <sup>*</sup></span></td>
+				<td>
+					<select class="form-select" th:field="${dto.program}">
+					  <option value="select"> --select--</option>
+					  <option value="Diploma">Diploma</option>
+					  <option value="B.tech">B.tech</option>
+					  <option value="M.tech">M.tech</option>
+					  <option value="BCA">BCA</option>
+					  <option value="MCA">MCA</option>
+					</select>
+				</td>
+				</tr>
+				<tr>
+				<td>Branch<span style="color:red;"> <sup>*</sup></span></td>
+					<td>
+				<select class="form-select" th:field="${dto.branch}">
+					<option value="select"> --select--</option>
+					<option value="CSE">Computer Science</option>
+					<option value="IT">IT</option>
+					<option value="Civil Enginiring">Civil Enginiring</option>
+					<option value="Electronics">Electronics</option>
+					<option value="Machanical">Machanical</option>
+					</select>
+					</td>
+					</tr>
+				
+					<tr>
+						<td>Year<span style="color:red;"> <sup>*</sup></span></td>
+							<td>
+							<select class="form-select" th:field="${dto.year}">
+					        <option value="select"> --select--</option>
+							<option value="1st year">1st year</option>
+							<option value="2nd year">2nd year</option>
+							<option value="3rd year">3rd year</option>
+							<option value="Final year">Final year</option>
+							</select>
+						</td>
+						</tr>
+						<tr>
+							<td>Contact No<span style="color:red;"> <sup>*</sup></span></td>
+							<td>
+						  <input type="number" required class="form-control" placeholder="Phone No." th:field="${dto.contactno}" />
+							</td>
+							</tr>
+							<tr>
+							<td>Email Address<span style="color:red;"> <sup>*</sup></span></td>
+							<td>
+						<input type="email" required class="form-control"  placeholder="Enter Email ID" th:field="${dto.emailaddress}"/>
+						</td>
+					</tr>
+					<tr>
+					<td>Choose Password<span style="color:red;"> <sup>*</sup></span></td>
+					<td>
+					<input type="password" required class="form-control" placeholder="Password" th:field="${dto.password}" />
+					</td>
+				</tr>
+				<tr>
+			<td></td>
+		  <td>
+			<button type="submit" class="btn w-100" style="background-color:#8B0000; color:white; font-weight:bold;">Ragister Now <i class="fa-solid fa-right-to-bracket"></i></button>
+		  </td>
+			</tr>
+			</table>
+		</form>
+		
+		</div>
+	</section>
+  </body>
+</html>

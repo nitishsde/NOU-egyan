@@ -1,0 +1,46 @@
+<!doctype html>
+	<html lang="en" th:replace="admin/adminbase::layout(~{::section})">
+	<head>
+		
+	</head>
+	<body>
+		<section>
+			<div class="row">
+				<h2 class="text-primary text-center fw-bold">Student Management</h2>
+				<table class="table table-bordered" style="margin: auto;">
+					<thead>
+						<tr>
+							<th>Enrollment No</th>
+							<th>Name</th>
+							<th>Father Name</th>
+							<th>Mother Name</th>
+							<th>Gender</th>
+							<th>Address</th>
+							<th>program</th>
+							<th>Branch</th>
+							<th>Year</th>
+							<th>Contact No</th>
+							<th>Email Address</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="s:${stu}">
+							<td th:text="${s.enrollmentno}"></td>
+							<td th:text="${s.name}"></td>
+							<td th:text="${s.fname}"></td>
+							<td th:text="${s.mname}"></td>
+							<td th:text="${s.gender}"></td>
+							<td th:text="${s.address}"></td>
+							<td th:text="${s.program}"></td>
+							<td th:text="${s.branch}"></td>
+							<td th:text="${s.year}"></td>
+							<td th:text="${s.contactno}"></td>
+							<td th:text="${s.emailaddress}"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		
+	</body>
+</html>
