@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" th:replace="student/studentbase::layout(~{::section})">
+  <head>
+   
+  </head>
+  <body>
+    <section>
+		<div class="row">
+			<h1 class="text-center text-warning fw-bold">View Assignment </h1>
+			<table class="table table-bordered" style="width: 90%; margin: auto;">
+				<tr>
+					<th>Subject</th>
+					<th>Topic</th>
+					<th>File</th>
+					<th>Posted Date</th>
+				</tr>
+				<tr th:each="m:${mlist}">
+					<td th:text="${m.subject}"></td>
+					<td th:text="${m.topic}"></td>
+					<td>
+						<a href="@{'/mat/'+${m.filename}}">
+							<span th:text="${m.filename}"></span>
+						</a>
+					</td>
+					<td th:text="${m.posteddate}"></td>
+				</tr>
+			</table>
+			
+		</div>
+	</section>
+  </body>
+</html>

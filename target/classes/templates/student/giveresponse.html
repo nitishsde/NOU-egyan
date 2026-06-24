@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" th:replace="student/studentbase::layout(~{::section})">
+  <head>
+   
+  </head>
+  <body>
+    <section>
+		<div class="row">
+			<div style="margin-left: 65px; margin-bottom: 10px;"><span style="font-weight: bold; color: rgb(99, 98, 98);">STUDENT</span><span style="color: #FFA500; border: 2px;"> _________________</span>
+						       <p style="font-size: 28px; font-weight: bold;">RESPONSE<span style="color: #8B0000;"> HERE </span></p></div>
+
+			<div class="col-sm-8 mx-auto">
+			<form class="form-group" method="post" th:object="${dto}">
+				<table class="table table-bordered" style="margin:auto;width:60%;">
+								
+					<tr>
+							<td>Select Response Type</td>
+							<td>
+								<select class="form-select" th:field="${dto.responsetype}">
+								  <option value="select"> --select--</option>
+								  <option value="Complaint">Complaint</option>
+								  <option value="Feedback">Feedback</option>
+								</select>
+							</td>
+							</tr>
+							<tr>
+							<td>Enter Response Subject</td>
+							<td>
+								<input type="text"  class="form-control"  placeholder="Enter response subject.." th:field="${dto.subject}" required style="color:black; background-color:white;"/>
+								</td>
+								</tr>
+							<td>Enter Response Message</td>
+								<td>
+							<textarea required class="form-control w-100 H-100" placeholder="Enter Response Message.." th:field="${dto.message}" style="color:black; background-color:white;"></textarea>
+							</td>
+						</tr>
+						<tr>
+						<td></td>
+							<td>
+						<button type="submit" class="btn PY-3" style="color:white; background-color:#8B0000;">Submit Here</button>
+						</td>
+					</tr>
+					</table>
+				</form>
+				</div>
+				
+		</div>
+	</section>
+  </body>
+</html>

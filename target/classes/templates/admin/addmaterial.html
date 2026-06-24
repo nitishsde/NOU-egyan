@@ -1,0 +1,93 @@
+<html th:replace="admin/adminbase::layout(~{::section})">
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+	<body>
+		<section>
+			<div class="row">
+				<h1 class="text-primary text-center fw-bold">Add Study Material</h1>
+				<div th:if="${msg}">
+					<p th:text="${msg}" style="text-align: center; color: green;"></p>
+				</div>
+				<form class="form-group" th:object="${dto}" method="post" enctype="multipart/form-data">
+									<table class="table table-bordered" style="margin:auto;width:60%;">
+										
+										<tr>
+											<td>Select Program</td>
+											<td>
+											<select class="form-control" style="color:black; background-color:white;" th:field="${dto.program}">
+											<option value="">--select program--</option>
+										    <option value="Diploma">Diploma</option>
+											<option value="B.Tech">B.Tech</option>
+							      			<option value="M.Tech">M.Tech</option>
+											<option value="BCA">BCA</option>
+								     		<option value="MCA">MCA</option>
+											</select>
+										    </td>
+										    </tr>
+										    <tr>
+											<td>Select Branch</td>
+											<td>
+											<select class="form-control" style="color:black; background-color:white;" th:field="${dto.branch}">
+											<option value="">--select branch--</option>
+											<option value="Civil Engineering">Civil Engineering</option>
+											<option value="Electrical Engineering">Electrical Engineering</option>
+											<option value="Electronic Engineering">Electronic Engineering</option>
+											<option value="Mechnichal Engineering(Production)">Mechnichal Engineering(Production)</option>
+											<option value="Mechnichal Engineering(Automobile)">Mechnichal Engineering(Automobile)</option>
+											<option value="Information Technology">Information Technology</option>
+											<option value="Computer Science Engineering">Computer Science Engineering</option>
+											</select>
+											</td>
+										    </tr>
+										    <tr>
+											<td>Select Year</td>
+											<td>
+											<select class="form-control" style="color:black; background-color:white;" th:field="${dto.year}">
+											<option value="">--select year--</option>	
+											<option value="1st Year">1st year</option>
+											<option value="2nd Year">2nd year</option>
+											<option value="3rd Year">3rd year</option>
+											<option value="4th Year">4th year</option>
+											</select>
+										    </td>
+										   </tr>
+										   <tr>
+										   <td>Select Material Type</td>
+										   <td>
+												<select class="form-control" style="color:black; background-color:white;" th:field="${dto.materialtype}">
+													<option value="smat">Study Material</option>
+													<option value="assign">Assignment</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>Enter Subject</td>
+											<td>
+												<input type="text" th:field="${dto.subject}" style="color:black; background-color:white;" class="form-control" required/>
+											</td>
+										</tr>
+										<tr>
+											<td>Enter Topic</td>
+											<td>
+												<input type="text" th:field="${dto.topic}" style="color:black; background-color:white;" class="form-control " required/>
+											</td>		
+										</tr>
+										<tr>
+											<td>Select File</td>
+											<td>
+												<input type="file" th:field="${dto.filedata}" style="color:black; background-color:white;" class="form-control " required/>
+											</td>
+										</tr>
+										<tr>
+											<td></td>
+											<td>
+												<button type="submit" class="btn py-3 w-50" style="background-color:#8B0000;"><i class="fa-solid fa-book fa-beat-fade text-light"></i> Add Material</button>
+											</td>
+										</tr>
+									</table>
+								</form>
+							</div>
+		</section>
+	</body>
+</html>

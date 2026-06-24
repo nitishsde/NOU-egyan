@@ -1,0 +1,40 @@
+<!doctype html>
+	<html lang="en" th:replace="admin/adminbase::layout(~{::section})">
+	<head>
+		
+	</head>
+	<body>
+		<section>
+			<div class="row">
+				<h2 class=" fw-bold" style="color:#8B0000;">Enquiry Management</h2>
+				<table class="table table-bordered" style="margin: auto;">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Gender</th>
+							<th>Contact No</th>
+							<th>Email Address</th>
+							<th>Enquiry Test</th>
+							<th>Enquiry Date</th>
+							<th> Detete</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="e:${eqlist}">
+							<td th:text="${e.name}"></td>
+							<td th:text="${e.gender}"></td>
+							<td th:text="${e.contactno}"></td>
+							<td th:text="${e.emailaddress}"></td>
+							<td th:text="${e.enquirytext}"></td>
+							<td th:text="${e.posteddate}"></td>
+							<td>
+								<a class="btn btn-danger" href="#">Delete</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		
+	</body>
+</html>

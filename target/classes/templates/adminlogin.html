@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" th:replace="base::layout(~{::section})">
+  <head>
+   
+  </head>
+  <body>
+    <section>
+		<div class="row">
+			<div class="col-sm-8 mx-auto">
+			
+			</div>
+			
+		<h2 class="text-center mb-5 mt-2" style="color:#8B0000">Admin Login?</h2>
+			<form class="form-group shadow rounded-4 w-50  mx-auto" th:object="${dto}" method="post">
+				<center><img src="images/logo1.png" alt="" height="100px" class="mb-3 mt-3"/></center>
+							<table class="table table-bordered mb-5" style="margin:auto;width:60%;">
+								<tr>
+									<td><i class="fa-solid fa-user"></i> User Id<span style="color:red;"> <sup>*</sup></span></td>
+									<td>
+										<input type="text" th:field="${dto.userid}" placeholder=" User Id" class="form-control" required/>
+									</td>
+								</tr>
+								<tr>
+									<td><i class="fa-solid fa-lock"></i> Password<span style="color:red;"> <sup>*</sup></span></td>
+									<td>
+										<input type="password" th:field="${dto.password}" placeholder="Password"class="form-control" required/>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									</td>
+									<td>
+										<button type="submit" class="btn w-100" style="background-color:#8B0000; color:white; font-weight:bold;" >Login <i class="fa-solid fa-right-to-bracket"></i></button>									</td>
+								</tr>
+								<div th:if="${msg}">
+													<p th:text="${msg}" style="color:red; text-align:center;"></p>
+											</div>
+							</table>
+						</form>
+		</div>
+	</section>
+  </body>
+</html>

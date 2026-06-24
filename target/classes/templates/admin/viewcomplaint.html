@@ -1,0 +1,42 @@
+<!doctype html>
+	<html lang="en" th:replace="admin/adminbase::layout(~{::section})">
+	<head>
+		
+	</head>
+	<body>
+		<section>
+			<div class="row">
+				<h2 class="text-primary text-center fw-bold">Complaint Management</h2>
+				<table class="table table-bordered" style="margin: auto;">
+					
+						<thead class="table-dark">
+													<th class="text-white">Enrollment No</th>
+													<th class="text-white">Name</th>
+													<th class="text-white">Email Address</th>
+													<th class="text-white">Contact No</th>
+													<th class="text-white">Complaint Subject</th>
+													<th class="text-white">Complaint Message</th>
+													<th class="text-white">Complaint Date</th>
+													<th class="text-white">Delete</th>
+											</thead>
+						
+					<tbody>
+						<tr th:each="c:${clist}">
+							<td th:text="${c.enrollmentno}"></td>
+							<td th:text="${c.name}"></td>
+							<td th:text="${c.emailaddress}"></td>
+							<td th:text="${c.contactno}"></td>
+							<td th:text="${c.subject}"></td>
+							 <td th:text="${c.message}"></td>
+							<td th:text="${c.resdate}"></td>
+								<td>
+							<a href="#" class="btn btn-danger">Delete</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		
+	</body>
+</html>
